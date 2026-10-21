@@ -7,6 +7,8 @@
 - 実装範囲・制約: [DEVELOPMENT_STATUS.md](DEVELOPMENT_STATUS.md)
 - 検証記録: [VERIFICATION.md](VERIFICATION.md)
 
+2026-10-21: PR #1をCI成功後mainへマージしPages公開済み。単体18件、ローカル/公開版それぞれE2E15件が成功しています（合成メディア・仮想マイクでの確認）。
+
 ## はじめに
 
 1. 公開アプリ→「ファイルを選択」で音声または映像を選びます。別ファイルなら「MULTI-FILE」から両方を追加します。

@@ -18,4 +18,18 @@
 
 Physical microphone/camera, iOS/Android hardware, long recordings, OS memory exhaustion, real speech recognition, multi-person tracking, ELAN desktop compatibility, RQA/CRQA. Unimplemented features are explicitly unavailable in the UI.
 
-GitHub CI and deployed-site verification results will be recorded after publication.
+## GitHub and public deployment
+
+- Repository: https://github.com/kkodamalab/multimodal-behavior-analyzer
+- PR #1: https://github.com/kkodamalab/multimodal-behavior-analyzer/pull/1 — merged after successful CI.
+- Runtime source commit: `7149551258ab6cc46219f0a4f13fbc588c3302b7`.
+- PR CI: https://github.com/kkodamalab/multimodal-behavior-analyzer/actions/runs/39556303434 — success.
+- main CI: https://github.com/kkodamalab/multimodal-behavior-analyzer/actions/runs/39556477722 — success.
+- Pages deploy: https://github.com/kkodamalab/multimodal-behavior-analyzer/actions/runs/39556608122 — success, 2026-10-21 15:38 JST.
+- Live URL: https://kkodamalab.github.io/multimodal-behavior-analyzer/
+- HTTP checks: HTML, `assets/index-BJ7gdEUs.js`, `assets/index-1e70xnRt.css` all returned 200.
+- Public Chromium E2E: **15/15 passed in 36.8 seconds** with `MBA_BASE_URL` set to the live URL. No page JavaScript exceptions were observed by the test suite.
+- Public tests exercised file loading, audio/video playback, seeking, offsets, timeline editing, IndexedDB reload restoration, JSON relinking, CSV/JSON/TXT/Markdown/EAF downloads, fake-microphone capture, permission-denial errors, storage-failure errors and mobile-width layout.
+- No AI model assets exist in this release; their loading or inference is not claimed as tested.
+
+There are 33 distinct automated checks (18 unit + 15 E2E). The same 15 E2E scenarios passed locally, on GitHub CI, and against the public deployment. The documentation-only verification commit does not change the deployed runtime assets.
