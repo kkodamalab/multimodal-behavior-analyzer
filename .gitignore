@@ -6,3 +6,4 @@ playwright-report/
 .venv/
 __pycache__/
 fixtures/
+*.tsbuildinfo
